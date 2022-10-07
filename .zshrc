@@ -9,6 +9,7 @@ fi
 export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
+#ZSH_THEME="agnoster"
 
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
@@ -26,7 +27,11 @@ source $ZSH/oh-my-zsh.sh
 ~/.z.sh
 
 # to avoid calling nvim. Vim sounds better xD
-alias vim='nvim'
+alias v='nvim'
+alias ll='ls -a'
+alias rmd='rm -r'
+alias cpd='cp -r'
+alias mvd='mv -r'
 
 
 # >>> conda initialize >>>
