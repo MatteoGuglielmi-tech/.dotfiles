@@ -13,7 +13,8 @@ local packer_bootstrap = ensure_packer()
 
 return require("packer").startup(function()
     use { "wbthomason/packer.nvim" }
-    use { "folke/tokyonight.nvim" }
+    -- use { "folke/tokyonight.nvim" }
+    use { "Mofiqul/dracula.nvim" }
     use { "kyazdani42/nvim-web-devicons" }
     use {
         "nvim-treesitter/nvim-treesitter",
