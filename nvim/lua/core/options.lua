@@ -21,3 +21,14 @@ vim.opt.pumheight = 10
 vim.opt.hidden = true
 vim.opt.swapfile = false
 vim.opt.wrap = false
+
+vim.opt.foldmethod = "syntax"
+vim.opt.foldenable = false
+vim.opt.foldlevel = 99
+
+vim.cmd(
+[[
+  au BufWinLeave * silent! mkview!
+  au BufWinEnter * silent! loadview
+  ]]
+)
