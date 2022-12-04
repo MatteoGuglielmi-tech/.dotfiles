@@ -65,26 +65,26 @@ lspconfig["sumneko_lua"].setup({
 	},
 })
 
-lspconfig["pylsp"].setup({
-	on_attach = on_attach,
-	capabilities = capabilities,
-	settings = {
-		pylsp = {
-			plugins = {
-				pycodestyle = {
-					ignore = {
-						"W191",
-						"W293",
-						"E222",
-						"E231",
-						"E302",
-						"E501",
-					},
-				},
-			},
-		},
-	},
-})
+--lspconfig["pylsp"].setup({
+--	on_attach = on_attach,
+--	capabilities = capabilities,
+--	settings = {
+--		pylsp = {
+--			plugins = {
+--				pycodestyle = {
+--					ignore = {
+--						"W191",
+--						"W293",
+--						"E222",
+--						"E231",
+--						"E302",
+--						"E501",
+--					},
+--				},
+--			},
+--		},
+--	},
+--})
 
 lspconfig["clangd"].setup({
 	on_attach = on_attach,

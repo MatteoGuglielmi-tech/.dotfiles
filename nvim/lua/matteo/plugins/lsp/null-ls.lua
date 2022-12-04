@@ -23,19 +23,12 @@ null_ls.setup({
 		formatting.clang_format, -- c/cpp/java/cs/cuda formatter
 		formatting.stylua, -- lua formatter
 		formatting.black,
-		formatting.blue,
 		formatting.isort, -- used to sort imports
-		formatting.yapf,
-		formatting.yapf,
-		formatting.autopep8,
-		formatting.shellharden,
 		--------------------
 		------ LINTERS -----
 		--------------------
-		diagnostics.gitlint,
 		diagnostics.cpplint,
 		diagnostics.flake8,
-		diagnostics.mypy,
 		diagnostics.pylint,
 		diagnostics.vulture,
 		diagnostics.shellcheck,
