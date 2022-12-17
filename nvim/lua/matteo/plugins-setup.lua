@@ -76,6 +76,11 @@ return packer.startup(function(use)
 	-- statusline : to have a fancy line status at the bottom
 	use({ "nvim-lualine/lualine.nvim" })
 
+	-- IDE tabs like
+	use({ "akinsho/bufferline.nvim", tag = "v3.*", requires = "nvim-tree/nvim-web-devicons" })
+
+	-- to delete buffers without closing the window
+	use({ "moll/vim-bbye" })
 	-- fuzzy finding telescope
 	-- dependency for better sorting performance
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
@@ -116,12 +121,34 @@ return packer.startup(function(use)
 		end,
 	})
 
+	-- use nvim-ts-rainbow for rainbow parentheses
+	use({ "p00f/nvim-ts-rainbow" })
+
 	-- auto closing
 	use({ "windwp/nvim-autopairs" }) -- autoclose parens, brackets, quotes, etc...
 	use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
 
+	-- toggleterm to toggle terminal while being in neovim window
+	use({ "akinsho/toggleterm.nvim" })
+
 	-- git integration
-	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
+	use({ "lewis6991/gitsigns.nvim" }) -- show line modifications on left hand side
+
+	-- use indentLine package to show indentation
+	use({ "lukas-reineke/indent-blankline.nvim" })
+
+	-- use alpha to have a better experience with nvim
+	use({
+		"goolord/alpha-nvim",
+		config = function()
+			require("alpha").setup(require("alpha.themes.dashboard").config)
+		end,
+	})
+	-- use which-key to have keybindings popup_mappings
+	use({ "folke/which-key.nvim" })
+
+	-- use copilot from github
+	use({ "github/copilot.vim" })
 
 	if packer_bootstrap then
 		require("packer").sync()

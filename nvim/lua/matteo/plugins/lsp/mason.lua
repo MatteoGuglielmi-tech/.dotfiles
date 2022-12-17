@@ -26,8 +26,6 @@ mason_lspconfig.setup({
 		"sumneko_lua", -- lua
 		"clangd", -- C / C++
 		"pyright", -- python
-		"sourcery", -- python
-		-- "pylsp", -- pylsp
 		"bashls", -- bash
 	},
 	-- auto-install configured servers (with lspconfig)
@@ -43,10 +41,9 @@ mason_null_ls.setup({
 		"black", -- python
 		"isort",
 		-- linters
+		"gitlint",
 		"cpplint", -- c/cpp
 		"flake8",
-		"pylint",
-		"vulture",
 		"shellcheck", -- bash
 	},
 	-- auto-install configured formatters & linters (with null-ls)

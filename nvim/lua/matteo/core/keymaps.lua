@@ -77,7 +77,6 @@ map("v", "<leader>p", '"_dP', opts)
 -- Delete selected text without yanking
 map("v", "<leader>d", '"-d"', opts)
 
-
 ----------------------
 -- Plugin Keybinds
 ----------------------
@@ -104,11 +103,8 @@ map("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current changes 
 -- restart lsp server
 map("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
 
+-- navigate buffers
+map("n", "<S-l>", ":bnext<CR>", opts)
+map("n", "<S-h>", ":bprevious<CR>", opts)
 
-
-
-
-
-
-
-
+map("n", "<leader>c", ":Bdelete<CR>", opts)

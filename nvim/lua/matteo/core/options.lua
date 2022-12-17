@@ -35,12 +35,10 @@ vim.opt.foldmethod = "manual"
 vim.opt.foldenable = false
 vim.opt.foldlevel = 99
 
-vim.cmd(
-[[
+vim.cmd([[
   au BufWinLeave * silent! mkview!
   au BufWinEnter * silent! loadview
-  ]]
-)
+  ]])
 
 -- search settings
 -- if searching lower case matches all occurences (also upper cased)
@@ -56,13 +54,7 @@ vim.opt.clipboard:append("unnamedplus")
 
 -- split windows
 vim.opt.splitright = true
-vim.opt.splitbelow = true 
+vim.opt.splitbelow = true
 
 -- to consider - as part of word
 vim.opt.iskeyword:append("-")
-
-
-
-
-
-

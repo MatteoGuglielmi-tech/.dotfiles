@@ -17,8 +17,6 @@ treesitter.setup({
 	-- ensure these language parsers are installed
 	ensure_installed = {
 		"json",
-		"yaml",
-		"markdown",
 		"bash",
 		"lua",
 		"vim",
@@ -28,4 +26,10 @@ treesitter.setup({
 	},
 	-- auto install above language parsers
 	auto_install = true,
+	rainbow = {
+		enable = true,
+		extended_mode = true,
+		max_file_lines = nil,
+	},
+	autopairs = { enable = true },
 })

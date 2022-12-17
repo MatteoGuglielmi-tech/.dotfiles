@@ -22,15 +22,14 @@ null_ls.setup({
 		--------------------
 		formatting.clang_format, -- c/cpp/java/cs/cuda formatter
 		formatting.stylua, -- lua formatter
-		formatting.black,
+		formatting.black.with({ extra_args = { "--fast", "--line-length=80" } }), -- python formatter
 		formatting.isort, -- used to sort imports
 		--------------------
 		------ LINTERS -----
 		--------------------
+		diagnostics.gitlint, -- git commit message linter
 		diagnostics.cpplint,
 		diagnostics.flake8,
-		diagnostics.pylint,
-		diagnostics.vulture,
 		diagnostics.shellcheck,
 
 		--diagnostics.eslint_d.with({ -- js/ts linter
