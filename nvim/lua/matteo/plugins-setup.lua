@@ -144,6 +144,10 @@ return packer.startup(function(use)
 			require("alpha").setup(require("alpha.themes.dashboard").config)
 		end,
 	})
+
+	use({ "ahmedkhalf/project.nvim" })
+	-- to speedup startup time
+	use({ "lewis6991/impatient.nvim" })
 	-- use which-key to have keybindings popup_mappings
 	use({ "folke/which-key.nvim" })
 
