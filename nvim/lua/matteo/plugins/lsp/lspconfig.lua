@@ -113,10 +113,16 @@ lspconfig["bashls"].setup({
 lspconfig["pyright"].setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
+	cmd = { "pyright-langserver", "--stdio" },
 	settings = {
-		Lua = {
-			diagnostics = {
-				globals = { "vim" },
+		python = {
+			analysis = {
+				typeCheckingMode = "basic",
+				diagnosticMode = "workspace",
+				inlayHints = {
+					variableTypes = true,
+					functionReturnTypes = true,
+				},
 			},
 		},
 	},
